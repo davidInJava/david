@@ -13,6 +13,7 @@ function App() {
             </Routes>
         </BrowserRouter>
     );
+    //Проверка
 }
 
 export default App;
