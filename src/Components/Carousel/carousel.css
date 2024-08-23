@@ -1,0 +1,100 @@
+.image-container {
+    padding-top: 10px;
+    margin-left: 20px;
+    background-color: #b4b4b4;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 610px;
+    border-radius: 10px;
+    width: 1000px;
+}
+
+.carousel-image {
+    max-width: 100%;
+    width: 100%;
+    /* Удаляем  height: auto */
+    height: 100%; /* Устанавливаем  фиксированную  высоту  */
+    border-radius: 10px;
+    border: 3px solid #ccc;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.swiper-container {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    background-color: #007bff; /*  Цвет  фона  кнопок */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.swiper-button-prev {
+    left: 20px;
+}
+
+.swiper-button-next {
+    right: 20px;
+}
+
+.swiper-pagination-bullet {
+    background-color: white;
+    opacity: 0.5;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: #007bff;
+}
+
+.carousel-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.carousel-button {
+    padding: 10px 20px; /*  Добавляем  отступы  */
+    border: 2px solid #007bff; /*  Граница  кнопок */
+    border-radius: 5px; /*  Скругление  углов  */
+    background-color: #fff; /*  Фон  кнопок */
+    color: #007bff; /*  Цвет  текста  */
+    font-weight: bold; /*  Жирный  шрифт */
+    cursor: pointer;
+    margin: 0 10px; /*  Добавляем  отступы  между  кнопками */
+}
+
+.carousel-button:hover {
+    background-color: #007bff; /*  Цвет  фона  при  наведении */
+    color: white; /*  Цвет  текста  при  наведении */
+}
+
+.carousel-button.prev { /*  Стиль  для  кнопки  "Предыдущее" */
+    margin-right: 20px; /*  Отступ  справа */
+}
+
+.carousel-button.next { /*  Стиль  для  кнопки  "Далее" */
+    margin-left: 20px; /*  Отступ  слева */
+}
