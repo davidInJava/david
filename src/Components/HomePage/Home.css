@@ -1,33 +1,41 @@
 .home-page {
-    background-color: #666666; /* Устанавливаем цвет фона */
-    color: white; /* Устанавливаем цвет текста */
-    margin: 0; /* Убираем отступы по умолчанию */
-    font-family: Arial, sans-serif; /* Устанавливаем шрифт */
-    height: 100vh; /* Устанавливаем высоту на весь экран */
+    background-image: url('../../source/img/phon12.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh; /* Изменено на min-height */
+    color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
+
+.about-container:hover {
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.79);
+}
+
 .image-container {
     overflow: hidden;
     padding-top: 10px;
     margin-left: 20px;
     background-color: #b4b4b4;
     margin-top: 20px;
-    height: 800px;
+    height: 580px; /* Удалено дублирование высоты */
     width: 45%; /* Занимает 45% ширины родителя */
-    justify-content: center; /* Центрируем по горизонтали */
-    align-items: center; /* Центрируем по вертикали */
-    height: 580px;
     border-radius: 10px; /* Скругление углов */
 }
+
 .content-container {
     display: flex; /* Используем Flexbox для расположения элементов */
     padding: 20px; /* Отступы вокруг контейнера */
-
 }
-.text{
+
+.text {
     display: flex;
     flex-direction: column; /* Располагаем блоки вертикально */
     flex: 2; /* Занимает 2 части доступного пространства */
 }
+
 .gruzovik {
     width: 98%; /* Устанавливаем ширину изображения на 100% от контейнера */
     max-width: 98%; /* Максимальная ширина изображения */
@@ -36,7 +44,6 @@
     border-radius: 10px; /* Скругление углов */
 }
 
-
 .about-container {
     background-color: #f9f9f9; /* Светлый фон */
     border-radius: 10px; /* Скругленные углы */
@@ -44,6 +51,15 @@
     padding: 20px; /* Отступы внутри контейнера */
     width: 650px; /* Максимальная ширина */
     margin: 0 20px; /* Центрирование контейнера */
+}
+
+.about-container-2 {
+    background-color: #f9f9f9; /* Светлый фон */
+    border-radius: 10px; /* Скругленные углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень */
+    padding: 20px; /* Отступы внутри контейнера */
+    margin: 0 20px; /* Центрирование контейнера */
+    width: 150px;
 }
 
 .about-title {
@@ -66,4 +82,61 @@
     font-weight: bold; /* Жирный шрифт для первой строки */
     font-size: 18px; /* Увеличенный размер шрифта для первой строки */
     color: #2c3e50; /* Цвет для первой строки */
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 1800px) {
+    .content-container {
+        flex-direction: column; /* Изменяем направление на вертикальное */
+    }
+
+    .image-container {
+        width: 100%; /* Ширина 100% на меньших экранах */
+        margin-left: 0; /* Убираем левый отступ */
+    }
+
+    .about-container {
+        width: 90%; /* Ширина 90% на меньших экранах */
+        margin: 10px auto; /* Центрируем контейнер */
+    }
+    .about-container-2 {
+        width: 50px; /* Уменьшаем размер кнопок */
+    }
+}
+
+@media (max-width: 768px) {
+    .about-title {
+        font-size: 24px; /* Уменьшаем размер шрифта заголовка */
+    }
+
+    .about-content {
+        font-size: 14px; /* Уменьшаем размер шрифта основного текста */
+    }
+
+    .about-container {
+        padding: 15px; /* Уменьшаем отступы внутри контейнера */
+    }
+    .about-container-2 img {
+        width: 30px; /* Уменьшаем размер кнопок */
+    }
+    .about-container-2 {
+        width: 80px; /* Уменьшаем размер кнопок */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-title {
+        font-size: 20px; /* Еще больше уменьшаем размер заголовка */
+    }
+
+    .about-content {
+        font-size: 12px; /* Уменьшаем основной текст */
+    }
+
+    .content-container {
+        padding: 10px; /* Уменьшаем отступы вокруг контейнера */
+    }
+    .about-container-2 img {
+        width: 25px; /* Еще больше уменьшаем размер кнопок */
+    }
 }

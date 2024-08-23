@@ -22,7 +22,7 @@ function Image() {
                         disableOnInteraction: false,
                     }}
                 >
-                    <SwiperSlide>
+                    <SwiperSlide >
                         <img src={image1} alt="slider 1" className="carousel-image" />
                     </SwiperSlide>
                     <SwiperSlide>

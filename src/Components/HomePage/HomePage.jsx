@@ -4,6 +4,7 @@ import Header from '../Header/Header';
 import gruzovik from '../../source/img/gruzovik2.jpg';
 import Carousel from '../Carousel/Image'
 import whatsapp from '../../source/img/whatsapp.png';
+import vk from '../../source/img/vk.png';
 const HomePage = () => {
     return (<div className="home-page">
         <Header/>
@@ -36,14 +37,14 @@ const HomePage = () => {
                     </div>
 
                 </div>
-                <div className="about-container" style={{marginTop: '20px'}}>
+                <div className="about-container-2" style={{marginTop: '20px'}}>
 
                     <a href="https://wa.me/79198981174" style={{paddingRight: '10px'}}>
                         <img src={whatsapp} alt="Описание изображения"/>
                     </a>
 
-                    <a href="https://wa.me/79198981174" style={{paddingRight: '10px'}}>
-                        <img src={whatsapp} alt="Описание изображения"/>
+                    <a href="https://vk.com/fromabovyan" style={{paddingRight: '10px'}}>
+                        <img src={vk} alt="Описание изображения"/>
                     </a>
                 </div>
             </div>

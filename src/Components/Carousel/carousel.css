@@ -1,29 +1,32 @@
 .image-container {
-    padding-top: 10px;
+    padding: 10px; /* Устанавливаем отступы внутри контейнера */
     margin-left: 20px;
-    background-color: #b4b4b4;
+    background-color: rgba(180, 180, 180, 0);
     margin-top: 20px;
+    display: flex; /* Используем flex для центрирования содержимого */
     justify-content: center;
     align-items: center;
-    height: 610px;
     border-radius: 10px;
-    width: 1000px;
+    width: 1000px; /* Задаем фиксированную ширину для больших экранов */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Добавляем тень для контейнера */
 }
 
 .carousel-image {
-    max-width: 100%;
-    width: 100%;
-    /* Удаляем  height: auto */
-    height: 100%; /* Устанавливаем  фиксированную  высоту  */
+    max-width: 100%; /* Ограничиваем максимальную ширину изображения */
+    height: auto; /* Устанавливаем автоматическую высоту для сохранения пропорций */
     border-radius: 10px;
-    border: 3px solid #ccc;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    padding: 10px;
+    border: 4px solid rgba(255, 255, 255, 0.8); /* Полупрозрачная белая рамка */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тень для изображения */
+}
+
+.carousel-image:hover {
+    transform: scale(1.05); /* Увеличиваем изображение при наведении */
 }
 
 .swiper-container {
     background-color: #f5f5f5;
     border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Добавляем тень для контейнера карусели */
 }
 
 .swiper-slide {
@@ -31,11 +34,14 @@
     justify-content: center;
     align-items: center;
     height: 600px;
+    border-radius: 10px; /* Скругляем углы слайдов */
+    overflow: hidden; /* Убираем переполнение */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Добавляем тень для слайдов */
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-    background-color: #007bff; /*  Цвет  фона  кнопок */
+    background-color: #007bff; /* Цвет фона кнопок */
     color: white;
     border: none;
     border-radius: 50%;
@@ -45,6 +51,7 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для кнопок */
 }
 
 .swiper-button-prev {
@@ -76,25 +83,63 @@
 }
 
 .carousel-button {
-    padding: 10px 20px; /*  Добавляем  отступы  */
-    border: 2px solid #007bff; /*  Граница  кнопок */
-    border-radius: 5px; /*  Скругление  углов  */
-    background-color: #fff; /*  Фон  кнопок */
-    color: #007bff; /*  Цвет  текста  */
-    font-weight: bold; /*  Жирный  шрифт */
+    padding: 10px 20px; /* Добавляем отступы */
+    border: 2px solid #007bff; /* Граница кнопок */
+    border-radius: 5px; /* Скругление углов */
+    background-color: #fff; /* Фон кнопок */
+    color: #007bff; /* Цвет текста */
+    font-weight: bold; /* Жирный шрифт */
     cursor: pointer;
-    margin: 0 10px; /*  Добавляем  отступы  между  кнопками */
+    margin: 0 10px; /* Добавляем отступы между кнопками */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход для кнопок */
 }
 
 .carousel-button:hover {
-    background-color: #007bff; /*  Цвет  фона  при  наведении */
-    color: white; /*  Цвет  текста  при  наведении */
+    background-color: #007bff; /* Цвет фона при наведении */
+    color: white; /* Цвет текста при наведении */
 }
 
-.carousel-button.prev { /*  Стиль  для  кнопки  "Предыдущее" */
-    margin-right: 20px; /*  Отступ  справа */
+.carousel-button.prev { /* Стиль для кнопки "Предыдущее" */
+    margin-right: 20px; /* Отступ справа */
 }
 
-.carousel-button.next { /*  Стиль  для  кнопки  "Далее" */
-    margin-left: 20px; /*  Отступ  слева */
+.carousel-button.next { /* Стиль для кнопки "Далее" */
+    margin-left: 20px; /* Отступ слева */
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 1200px) {
+    .image-container {
+        width: 90%; /* Уменьшаем ширину контейнера */
+        margin-left: auto; /* Центрируем контейнер */
+        margin-right: auto; /* Центрируем контейнер */
+    }
+    .swiper-slide {
+        height: 500px; /* Уменьшаем высоту слайда */
+    }
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        height: 400px; /* Уменьшаем высоту контейнера */
+    }
+    .swiper-slide {
+        height: 300px; /* Уменьшаем высоту слайда */
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        padding: 8px; /* Уменьшаем размер кнопок */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container {
+        height: 300px; /* Уменьшаем высоту контейнера */
+    }
+    .swiper-slide {
+        height: 200px; /* Уменьшаем высоту слайда */
+    }
+    .carousel-button {
+        padding: 8px 15px; /* Уменьшаем отступы кнопок */
+    }
 }

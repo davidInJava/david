@@ -8,12 +8,13 @@
 }
 
 .logo {
-    padding-left: 15px;
+    margin-left: 20px;
     font-family: 'Joti One', cursive;
-    font-size: 25px; /*  Стандартный размер */
+    font-size: 25px; /* Стандартный размер */
     color: #05ff00;
     font-weight: bold;
 }
+
 .nav {
     display: flex;
     align-items: center;
@@ -29,102 +30,92 @@
 
 .phone {
     font-family: 'Joti One', cursive;
-    font-size: 25px; /*  Уменьшаем размер текста */
-    color: #7dff91;
+    font-size: 25px; /* Стандартный размер */
+    color: #adffb8;
     font-weight: bold;
-    position: relative;
+    margin-right: 10px;
     z-index: 1;
-    margin-top: 20px;
-    margin-right: 10px
 }
+
 .nav-item:hover {
-    text-decoration: underline; /*  Подчеркиваем при наведении */
-    filter: blur(1px); /*  Добавляем блюр к тексту */
+    text-decoration: underline; /* Подчеркиваем при наведении */
+    filter: blur(1px); /* Добавляем блюр к тексту */
 }
+
 .trapezoid-container {
     position: relative;
     height: 100%; /* Задаем высоту контейнера */
+    display: flex; /* Используем flexbox для центрирования */
+    justify-content: center; /* Центрируем содержимое по горизонтали */
+    align-items: center; /* Центрируем содержимое по вертикали */
 }
 
 .trapezoid {
     width: 150%;
-    height: 100%;  /* Задаем высоту трапеции */
+    height: 80px;  /* Задаем высоту трапеции */
     background-color: rgba(16, 91, 0, 0.5);
-    clip-path: polygon(0 0, 100% 0,80% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
     transform: rotate(180deg);
     position: absolute;
     right: 0;
     top: 0;
 }
 
+/* Добавим стиль для номера */
+.trapezoid-number {
+    position: absolute;
+    font-size: 30px; /* Размер шрифта для номера */
+    color: white; /* Цвет текста */
+    z-index: 2; /* Убедимся, что номер выше трапеции */
+}
+
 /* Media Query для мобильных устройств */
 @media (max-width: 1000px) {
     .logo {
-        font-size: 18px; /*  Уменьшаем размер логотипа */
+        font-size: 20px; /* Уменьшаем размер логотипа */
     }
     .nav-item {
-        margin: 0 10px; /*  Уменьшаем отступы еще больше */
-        font-size: 15px;
-        z-index: 1;
-    }
-    .trapezoid-container {
-        position: relative;
-        height: 100%; /* Задаем высоту контейнера */
-    }
-
-    .trapezoid {
-        width: 150%;
-        height: 100%;  /* Задаем высоту трапеции */
-        background-color: rgba(16, 91, 0, 0.5);
-        clip-path: polygon(0 0, 100% 0,80% 100%, 0 100%);
-        transform: rotate(180deg);
-        position: absolute;
-        right: 0;
-        top: 0;
+        margin: 0 10px; /* Уменьшаем отступы */
+        font-size: 18px; /* Уменьшаем размер шрифта */
     }
     .phone {
-        font-family: 'Joti One', cursive;
-        font-size: 10px; /*  Уменьшаем размер текста */
-        color: #7dff91;
-        font-weight: bold;
-        position: relative;
-        z-index: 1;
-        margin-top: 20px;
-        margin-right: 10px
+        font-size: 18px; /* Уменьшаем размер текста */
     }
 }
 
-@media (max-width: 1297px) {
-    .logo {
-        font-size: 18px; /*  Уменьшаем размер логотипа */
-    }
-    .nav-item {
-        margin: 0 14px; /*  Уменьшаем отступы еще больше */
-        font-size: 20px;
-    }
-    .trapezoid-container {
-        position: relative;
-        height: 100%; /* Задаем высоту контейнера */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Меняем направление на вертикальное */
+        height: auto; /* Автоматическая высота для заголовка */
+        align-items: flex-start; /* Выравниваем элементы по левому краю */
+        padding: 10px; /* Уменьшаем отступы */
     }
 
-    .trapezoid {
-        width: 150%;
-        height: 100%;  /* Задаем высоту трапеции */
-        background-color: rgba(16, 91, 0, 0.5);
-        clip-path: polygon(0 0, 100% 0,80% 100%, 0 100%);
-        transform: rotate(180deg);
-        position: absolute;
-        right: 0;
-        top: 0;
+    .nav {
+        flex-direction: column; /* Меняем направление навигации на вертикальное */
+        align-items: center; /* Центрируем элементы навигации */
+        width: 100%; /* Задаем ширину навигации */
+    }
+
+    .nav-item {
+        margin: 5px 0; /* Уменьшаем отступы между элементами навигации */
+        font-size: 16px; /* Уменьшаем размер шрифта */
+    }
+
+    .phone {
+        font-size: 16px; /* Уменьшаем размер текста */
+        margin-top: 10px; /* Добавляем отступ сверху */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 18px; /* Уменьшаем размер логотипа */
+    }
+    .nav-item {
+        font-size: 14px; /* Уменьшаем размер шрифта */
     }
     .phone {
-        font-family: 'Joti One', cursive;
-        font-size: 20px; /*  Уменьшаем размер текста */
-        color: #7dff91;
-        font-weight: bold;
-        position: relative;
-        z-index: 1;
-        margin-top: 20px;
-        margin-right: 10px
+        font-size: 14px; /* Уменьшаем размер текста */
     }
 }
