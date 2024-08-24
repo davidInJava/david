@@ -5,6 +5,7 @@ import gruzovik from '../../source/img/gruzovik2.jpg';
 import Carousel from '../Carousel/Image'
 import whatsapp from '../../source/img/whatsapp.png';
 import vk from '../../source/img/vk.png';
+import Email from '../Email/SendEmail';
 const HomePage = () => {
     return (<div className="home-page">
         <Header/>
@@ -47,6 +48,9 @@ const HomePage = () => {
                         <img src={vk} alt="Описание изображения"/>
                     </a>
                 </div>
+            </div>
+            <div>
+                <Email></Email>
             </div>
 
         </div>
