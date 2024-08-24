@@ -48,7 +48,6 @@ const HomePage = () => {
                     </a>
                 </div>
             </div>
-            <div>Это проверка</div>
 
         </div>
     </div>);
