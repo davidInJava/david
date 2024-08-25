@@ -1,0 +1,116 @@
+.home-page {
+    background-image: url('../../source/img/phon12.png');
+    background-size: cover;
+    background-position: center; /* Center the background image */
+}
+
+.home-content-1-1 {
+    margin: 20px;
+    display: grid; /* Use grid for layout */
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    grid-template-rows: auto; /* Automatic height for rows */
+    gap: 20px; /* Spacing between elements */
+    background-color: #f5f5dc;
+    border-radius: 10px;
+    padding: 20px;
+    overflow: hidden; /* Hide overflow if image is too large */
+}
+
+/* Text container styles */
+.text-containers {
+    display: flex;
+    flex-direction: column; /* Stack text blocks vertically */
+    justify-content: flex-start; /* Align text to the top */
+    align-items: center; /* Center text horizontally */
+    max-width: 300px; /* Set a maximum width for the text container */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.text-container-2 {
+    margin-top: 20px; /* Top margin for the text block */
+    text-align: center; /* Center align the text */
+    margin-bottom: 10px; /* Bottom margin for the text block */
+}
+
+.text-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Align text at the top */
+    text-align: center; /* Center text */
+}
+
+.title-2 {
+    font-size: 16px;
+    color: #555;
+}
+
+.title {
+    text-align: center;
+    font-size: 34px;
+    color: #696969;
+    font-weight: bold;
+}
+
+/* Image styles */
+.image-1 {
+    width: 100%; /* Full width for the image */
+    height: auto; /* Auto height to maintain aspect ratio */
+    max-width: 800px; /* Maximum width for the image */
+    background-size: cover; /* Ensure background covers */
+    object-fit: cover; /* Maintain aspect ratio while filling */
+}
+
+/* Position elements correctly in the grid */
+.text-container-2 {
+    grid-column: 1; /* Left column */
+    grid-row: 1; /* First row */
+}
+
+.text-containers {
+    grid-column: 1; /* Left column */
+    grid-row: 2; /* Second row */
+}
+
+/* Adjust image placement in the grid */
+.image-1 {
+    grid-column: 2; /* Right column */
+    grid-row: 1 / span 2; /* Span both rows */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .home-content-1-1 {
+        grid-template-columns: 1fr; /* One column for medium screens */
+    }
+    .image-1 {
+        width: 100%; /* Full width for the image */
+        margin-top: 20px; /* Margin for spacing */
+    }
+}
+
+@media (max-width: 768px) {
+    .home-content-1-1 {
+        grid-template-columns: 1fr; /* Stack all elements in one column */
+        grid-template-rows: auto auto auto; /* Automatic height for rows */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .text-container-2 {
+        grid-column: 1; /* First row */
+        grid-row: 1; /* First row */
+        display: flex;
+        justify-content: center; /* Center content horizontally */
+        align-items: flex-start; /* Align content at the top */
+    }
+
+    .text-containers {
+        grid-column: 1; /* Second row */
+        grid-row: 2; /* Second row */
+    }
+
+    .image-1 {
+        grid-column: 1; /* Move image to the first column */
+        grid-row: 3; /* Position it below the text blocks */
+        margin-top: 20px; /* Add top margin for spacing */
+    }
+}

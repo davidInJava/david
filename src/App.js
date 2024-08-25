@@ -3,6 +3,7 @@ import Home from "./Components/HomePage/HomePage";
 import NotFound from "./Components/NotFound/NotFound";
 import Carousel from "./Components/Carousel/Image";
 import Email from "./Components/Email/SendEmail";
+import Main from './Components/Main/Home'
 function App() {
     return (
         <BrowserRouter>
@@ -10,6 +11,7 @@ function App() {
                 <Route index element={<Home/>} />
                 {/*<Route path='/carousel' element = {<Carousel/>}></Route>*/}
                 <Route path="*" element={<NotFound />} />
+                <Route path="/main" element={<Main />} />
                 <Route path="/email" element={<Email />} />
             </Routes>
         </BrowserRouter>
