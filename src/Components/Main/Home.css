@@ -35,11 +35,13 @@
     height: 60px;
     position: absolute;
 }
+
 .button-container {
     margin-top: 20px; /* Отступ сверху для кнопки */
     display: flex; /* Используем flex для выравнивания */
     justify-content: center; /* Центрируем кнопку по горизонтали */
 }
+
 .btn {
     width: 180px;
     cursor: pointer;
@@ -50,7 +52,6 @@
     margin-top: 20px;
     margin-bottom: 100px;
 }
-
 
 
 .btn:hover {
@@ -68,11 +69,13 @@
     font-weight: 100;
 
 }
+
 .btn:hover span {
     color: #ffffff;
     font-size: 18px;
     font-weight: 100;
 }
+
 .order-button {
     background-color: #2196F3; /* Цвет фона кнопки */
     color: #003aff; /* Цвет текста */
@@ -89,6 +92,7 @@
 .order-button:hover {
     background-color: #1976D2; /* Темнее при наведении */
 }
+
 /* Text container styles */
 .text-containers {
     display: flex;
@@ -138,17 +142,19 @@
     grid-column: 1; /* Left column */
     grid-row: 1; /* First row */
 }
-.text-container-3{
+
+.text-container-3 {
     grid-row: 2;
     grid-column: 1 /   span 2;
 }
+
 .text-container-3-1 {
     text-align: center;
     align-content: center;
     margin-top: 50px;
     color: #ff7b84;
     font-family: 'Roboto', sans-serif; /* Используйте шрифт, поддерживающий кириллицу */
-    font-size: 34px; /* Увеличиваем размер шрифта */
+    font-size: 44px; /* Увеличиваем размер шрифта */
     line-height: 1.5; /* Увеличиваем межстрочный интервал */
     text-shadow: 2px 2px 4px rgba(255, 190, 190, 0.3); /* Добавляем тень к тексту */
     background: linear-gradient(90deg, #ff7b84, #fa6e7d); /* Градиент фона */
@@ -157,7 +163,8 @@
     padding: 20px; /* Добавляем отступы */
     border-radius: 10px; /* Закругляем углы */
 }
-.text-container-3-2{
+
+.text-container-3-2 {
     display: flex;
     color: #343434;
     width: 100%;
@@ -165,89 +172,108 @@
 }
 
 
-
-.text-container-3-2-1{
+.text-container-3-2-1 {
     width: 300px;
     border: 2px solid #fa868c;
     padding: 18px;
     margin-right: 20px;
+    margin-bottom: 10px;
 }
-.text-container-3-2-1 span{
+
+.text-container-3-2-1 span {
     font-size: 20px;
     font-weight: bold;
 
 }
-.text-container-3-2-1 p{
+
+.text-container-3-2-1 p {
     font-size: 15px;
     color: #555;
 }
-.text-container-3-2-1 img{
-    width: 45px;
-padding-bottom: 10px;}
 
-.text-container-3-2-3{
+.text-container-3-2-1 img {
+    width: 45px;
+    padding-bottom: 10px;
+}
+
+.text-container-3-2-3 {
     width: 300px;
     border: 2px solid #fa868c;
     padding: 18px;
     margin-right: 20px;
+    margin-bottom: 10px;
 }
-.text-container-3-2-3 span{
+
+.text-container-3-2-3 span {
     font-size: 20px;
     font-weight: bold;
 
 }
-.text-container-3-2-3 p{
+
+.text-container-3-2-3 p {
     font-size: 15px;
     color: #555;
 }
-.text-container-3-2-3 img{
+
+.text-container-3-2-3 img {
     width: 45px;
-    padding-bottom: 10px;}
+    padding-bottom: 10px;
+}
 
 
-.text-container-3-2-4{
+.text-container-3-2-4 {
     width: 300px;
     border: 2px solid #fa868c;
     padding: 18px;
     margin-right: 20px;
+    margin-bottom: 10px;
 }
-.text-container-3-2-4 span{
+
+.text-container-3-2-4 span {
     font-size: 20px;
     font-weight: bold;
 
 }
-.text-container-3-2-4 p{
+
+.text-container-3-2-4 p {
     font-size: 15px;
     color: #555;
 }
-.text-container-3-2-4 img{
-    width: 45px;
-    padding-bottom: 10px;}
 
-.text-container-3-2-2{
+.text-container-3-2-4 img {
+    width: 45px;
+    padding-bottom: 10px;
+}
+
+.text-container-3-2-2 {
+    margin-bottom: 10px;
     width: 300px;
     background-color: #ff7e85;
     padding: 18px;
     margin-right: 20px;
     border: 2px solid #fa868c;
 }
-.text-container-3-2-2 span{
+
+.text-container-3-2-2 span {
     font-size: 20px;
     font-weight: bold;
     color: #ffffff;
 
 }
-.text-container-3-2-2 p{
+
+.text-container-3-2-2 p {
     font-size: 15px;
     color: #ffffff;
 }
-.text-container-3-2-2 img{
-    background-color: #ffffff;
+
+.text-container-3-2-2 img {
+    background-color: #faefde;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
     width: 45px;
-    margin-bottom: 10px;}
+    margin-bottom: 10px;
+}
 
 
 .text-containers {
@@ -262,6 +288,51 @@ padding-bottom: 10px;}
 }
 
 /* Responsive Styles */
+
+
+.home-content-1-2 {
+    background-color: #fff5e6;
+    padding: 20px;
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+    border-radius: 10px;
+}
+
+
+.home-content-1-2-1 {
+    justify-content: center;
+    text-align: center;
+}
+
+
+.home-content-1-2-2 {
+    justify-content: space-evenly;
+    display: flex; /* Используем Flexbox */
+    flex-wrap: wrap; /* Позволяет карточкам переноситься на новую строку */
+    gap: 20px; /* Расстояние между карточками */
+}
+
+.block-1 {
+    border-radius: 10px;
+    max-width: 350px;
+    height: 450px;
+    background-color: #f6eac4;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный переход */
+}
+
+.block-1:hover {
+    transform: scale(1.05); /* Увеличение размера на 5% при наведении */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Увеличиваем тень при наведении */
+}
+
+.img-block{
+    opacity: 0.8;
+    border-radius: 10px;
+    width: 100%;
+    height: 220px;
+}
 
 
 @media (max-width: 768px) {
@@ -288,5 +359,18 @@ padding-bottom: 10px;}
         grid-column: 1; /* Move image to the first column */
         grid-row: 3; /* Position it below the text blocks */
         margin-top: 20px; /* Add top margin for spacing */
+    }
+
+    .text-container-3-2 {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .text-container-3-2-1,
+    .text-container-3-2-2,
+    .text-container-3-2-3,
+    .text-container-3-2-4 {
+        width: 90%; /* Use 90% width for small screens */
+        max-width: 300px; /* Maintain a max width for larger screens */
     }
 }

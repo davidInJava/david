@@ -1,10 +1,37 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './Home.css';
 import Header from '../Header/Header';
 import dostavka from '../../source/img/Доставка.png';
 import mobile from '../../source/img/mobile.png';
 import speed from '../../source/img/speed.png'
+import price from '../../source/img/price.png'
+import shiled from '../../source/img/shield.png'
+import musor from '../../source/img/musor.jpg'
+import gruz from '../../source/img/gruz.jpg'
+import sborka from '../../source/img/Сборка.jpg'
+import snos from '../../source/img/Снос.jpg'
+
+const useWindowWidth = () => {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    return windowWidth;
+};
 const Home = () => {
+    const width = useWindowWidth();
+
+
     return (
         <div className="home-page">
             <Header/>
@@ -33,8 +60,10 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
+                    {width > 768 && <div style={{alignItems: "center", display: "flex", marginTop: "5%"}}>
+                        <img src={dostavka} alt="delivery" className="image-1"/>
 
-                    <img src={dostavka} alt="delivery" className="image-1"/>
+                    </div>}
 
                     <div className="text-container-3">
                         <div className="text-container-3-1">
@@ -64,7 +93,7 @@ const Home = () => {
                             </div>
 
                             <div className="text-container-3-2-3">
-                                <div><img src={mobile}/></div>
+                                <div><img src={price}/></div>
                                 <span>Цены</span>
 
                                 <p>
@@ -73,7 +102,7 @@ const Home = () => {
                             </div>
 
                             <div className="text-container-3-2-4">
-                                <div><img src={mobile}/></div>
+                                <div><img src={shiled}/></div>
                                 <span>Безопасность</span>
 
                                 <p>
@@ -88,6 +117,100 @@ const Home = () => {
                     </div>
 
 
+                </div>
+
+
+                <div className="home-content-1-2">
+                    <div className="home-content-1-2-1">
+                        <h1 className="title-3"
+                            style={{textAlign: "center", color: "#3b3b3b"}}>Наши услуги</h1>
+                        <hr style={{
+                            backgroundColor: '#545454',
+                            border: 'none',
+                            height: '1px',
+                            width: '80%', marginBottom: "100px"
+                        }}/>
+                    </div>
+
+                    <div className="home-content-1-2-2">
+                        <div className='block-1'>
+                            <div>
+                                <img className='img-block' src={musor}/>
+                            </div>
+                            <div>
+                                <h1 style={{marginLeft: '10px'}}>Вывоз мусора</h1>
+                                <hr style={{
+                                    backgroundColor: '#545454',
+                                    border: 'none',
+                                    height: '1px',
+                                    width: '80%',
+                                    marginLeft: '10px'
+                                }}/>
+                            </div>
+                            <div style={{margin: '10px', color: '#606060'}}>
+                                Выгрузка, доставка, разгрузка строительного мусора
+                            </div>
+
+                        </div>
+                        <div className='block-1'>
+                            <div>
+                                <img className='img-block' src={gruz}/>
+                            </div>
+                            <div>
+                                <h1 style={{marginLeft: '10px'}}>Заказать грузчика</h1>
+                                <hr style={{
+                                    backgroundColor: '#545454',
+                                    border: 'none',
+                                    height: '1px',
+                                    width: '80%',
+                                    marginLeft: '10px'
+                                }}/>
+                            </div>
+                            <div style={{margin: '10px', color: '#606060'}}>
+                                Разгрузка мебели и других товаров, нашими грузчиками, поможет вам сэкономить силы и
+                                время.
+                            </div>
+
+                        </div>
+                        <div className='block-1'>
+                            <div>
+                                <img className='img-block' src={sborka}/>
+                            </div>
+                            <div>
+                                <h1 style={{marginLeft: '10px'}}>Сборка мебели</h1>
+                                <hr style={{
+                                    backgroundColor: '#545454',
+                                    border: 'none',
+                                    height: '1px',
+                                    width: '80%',
+                                    marginLeft: '10px'
+                                }}/>
+                            </div>
+                            <div style={{margin: '10px'}}>
+                                Приедем, разберем или соберем мебель за самые короткие сроки.
+                            </div>
+
+                        </div>
+                        <div className='block-1'>
+                            <div>
+                                <img className='img-block' src={snos}/>
+                            </div>
+                            <div>
+                                <h1 style={{marginLeft: '10px'}}>Снос зданий</h1>
+                                <hr style={{
+                                    backgroundColor: '#545454',
+                                    border: 'none',
+                                    height: '1px',
+                                    width: '80%',
+                                    marginLeft: '10px'
+                                }}/>
+                            </div>
+                            <div style={{margin: '10px'}}>
+                                Наша компания также занимается сносом зданий, в том числе и дорог.
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
