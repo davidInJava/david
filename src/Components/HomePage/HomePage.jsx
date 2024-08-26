@@ -6,6 +6,7 @@ import Carousel from '../Carousel/Image'
 import whatsapp from '../../source/img/whatsapp.png';
 import vk from '../../source/img/vk.png';
 import Email from '../Email/SendEmail';
+
 const HomePage = () => {
     return (<div className="home-page">
         <Header/>
@@ -49,10 +50,11 @@ const HomePage = () => {
                     </a>
                 </div>
             </div>
-            <div>
-                <Email></Email>
-            </div>
 
+
+        </div>
+        <div style={{justifyContent: 'center', display: 'flex', }}>
+            <Email></Email>
         </div>
     </div>);
 };

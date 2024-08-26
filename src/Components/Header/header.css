@@ -70,7 +70,7 @@
 }
 
 /* Media Query для мобильных устройств */
-@media (max-width: 1000px) {
+@media (max-width: 1140px) {
     .logo {
         font-size: 20px; /* Уменьшаем размер логотипа */
     }
@@ -81,13 +81,24 @@
     .phone {
         font-size: 18px; /* Уменьшаем размер текста */
     }
+
 }
 
 @media (max-width: 768px) {
+    .trapezoid {
+        width: 150%;
+        height: 80px;  /* Задаем высоту трапеции */
+        background-color: rgba(16, 91, 0, 0);
+        clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+        transform: rotate(180deg);
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
     .header {
         flex-direction: column; /* Меняем направление на вертикальное */
         height: auto; /* Автоматическая высота для заголовка */
-        align-items: flex-start; /* Выравниваем элементы по левому краю */
+        align-items: center; /* Выравниваем элементы по левому краю */
         padding: 10px; /* Уменьшаем отступы */
     }
 
@@ -105,6 +116,10 @@
     .phone {
         font-size: 16px; /* Уменьшаем размер текста */
         margin-top: 10px; /* Добавляем отступ сверху */
+    }
+    .logo{
+        align-content: center;
+        align-items: center;
     }
 }
 
