@@ -10,6 +10,7 @@ import musor from '../../source/img/musor.jpg'
 import gruz from '../../source/img/gruz.jpg'
 import sborka from '../../source/img/Сборка.jpg'
 import snos from '../../source/img/Снос.jpg'
+import Modal from '../Modal/Modal'
 
 const useWindowWidth = () => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -30,6 +31,15 @@ const useWindowWidth = () => {
 };
 const Home = () => {
     const width = useWindowWidth();
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleOpenModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+    };
 
 
     return (
@@ -52,14 +62,14 @@ const Home = () => {
                                     товары по Ростову-на-Дону!</h1>
                                 {/* Добавляем кнопку в новом div */}
                                 <div className="button-container" style={{marginTop: "5%"}}>
-                                    <button className="btn">
-
+                                    <button className="btn" onClick={handleOpenModal}>
                                         <span>Заказать доставку</span>
                                     </button>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     {width > 768 && <div style={{alignItems: "center", display: "flex", marginTop: "5%"}}>
                         <img src={dostavka} alt="delivery" className="image-1"/>
 
@@ -109,7 +119,7 @@ const Home = () => {
                                     С нами вы можете не волноваться о сохранности товара
                                 </p>
                             </div>
-
+                            <Modal isOpen={isModalOpen} onClose={handleCloseModal} />
 
                         </div>
 
@@ -186,7 +196,7 @@ const Home = () => {
                                     marginLeft: '10px'
                                 }}/>
                             </div>
-                            <div style={{margin: '10px'}}>
+                            <div style={{margin: '10px', color: '#606060'}}>
                                 Приедем, разберем или соберем мебель за самые короткие сроки.
                             </div>
 
@@ -205,7 +215,7 @@ const Home = () => {
                                     marginLeft: '10px'
                                 }}/>
                             </div>
-                            <div style={{margin: '10px'}}>
+                            <div style={{margin: '10px', color: '#606060'}}>
                                 Наша компания также занимается сносом зданий, в том числе и дорог.
                             </div>
 
