@@ -48,13 +48,13 @@ const Home = () => {
             <div className="home-content-1">
                 <div className="home-content-1-1">
                     <div style={{backgroundColor: "#fcf1e0", padding: "20px", borderRadius: "10px", marginTop: "20px"}}>
-                        <div className="text-container-2">
-                            <span className="title-2">Курьерская служба </span>
-                            <span className="title-2">/</span>
-                            <span className="title-2"> Доставка по Ростову-на-Дону </span>
-                            <span className="title-2">/</span>
-                            <span className="title-2" style={{color: "red"}}> Стоимость доставки</span>
-                        </div>
+                        {/*<div className="text-container-2">*/}
+                        {/*    <span className="title-2">Курьерская служба </span>*/}
+                        {/*    <span className="title-2">/</span>*/}
+                        {/*    <span className="title-2"> Доставка по Ростову-на-Дону </span>*/}
+                        {/*    <span className="title-2">/</span>*/}
+                        {/*    <span className="title-2" style={{color: "red"}}> Стоимость доставки</span>*/}
+                        {/*</div>*/}
                         <div className="text-container">
                             <div style={{maxWidth: "58%", marginTop: "10%"}}>
                                 <h1 className="title"
